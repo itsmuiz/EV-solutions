@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-color: #000;
+            color: aliceblue;
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            position: absolute;
+            left: -39%;
+            bottom: 0%;
+            transition: all .3s ease ;
+        }
+        button{
+
+        }
+        img{
+            height: 50px;
+            width: 50px;
+            transition: all .3s ease ;
+            border-radius: 50%;
+            border: 2px solid #e8e8e8;
+        }
+        menu{
+            height: 90%;
+            width: 10%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            overflow: hidden;
+        }
+        ul{
+            list-style: none;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+        }
+        li{
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button>
+        <img src="/assets/menu.svg" alt="">
+    </button>
+    <nav>
+        <menu>
+            <ul>
+                <li><img src="/assets/menu.svg" alt=""> home</li>
+                <li><img src="/assets/menu.svg" alt=""> contact</li>
+                <li><img src="/assets/menu.svg" alt=""> product</li>
+            </ul>
+        </menu>
+    </nav>
+    <script>
+        var menu = document.querySelector('menu');
+        var img = document.querySelector('img');
+        var nav = document.querySelector('nav');
+        var button = document.querySelector('button');
+        button.addEventListener('click', () => {
+
+            if(nav.style.left === '0%') {
+                nav.style.left = '-40%';
+                menu.style.width = '10%';
+                img.src = '/assets/menu.svg';
+            }else{
+                nav.style.left = '0%';
+                menu.style.width = '100%';
+                img.src = '/assets/close.svg';
+            }
+        });
+    </script>
+</body>
+</html>

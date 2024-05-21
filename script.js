@@ -1,14 +1,10 @@
-console.log('start');
+let ham = document.querySelector('.hamburger');
+let sideBar = document.querySelector('.side-bar');
 
-let down = document.querySelector('.down');
-let drop = document.querySelector('.drop');
-
-down.addEventListener('click', ()=>{
-    if (drop.style.display === 'none') {
-        drop.style.display = 'flex';
+ham.addEventListener('click', () => {
+    if (sideBar.style.display === 'none') {
+    sideBar.style.display = 'block';
     } else {
-        drop.style.display = 'none';
+    sideBar.style.display = 'none';
     }
 });
-
-

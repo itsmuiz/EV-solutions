@@ -1,8 +1,3 @@
-:root {
-    --background-color: #EEEEEE;
-    --primary-color: #d42e2e;
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -12,129 +7,144 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-color: var(--background-color);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     overflow-x: hidden;
 }
 
-nav {
-    height: 10vh;
+.pg {
+    height: 100%;
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: #ffffff;
+}
+
+nav {
+    height: 10%;
+    width: 100%;
+    background-color: #c25c09;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 .left {
-    height: 80%;
+    height: 100%;
     width: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .logo {
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .logo img {
+    padding: 05px 20px;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
     border-radius: 50%;
 }
 
 .center {
-    height: 80%;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    width: 60%;
+}
+
+ul,li,a {
+    list-style: none;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .center ul {
-    list-style: none;
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 40px;
-}
-
-.center ul li {
-    position: relative;
-    height: 50%;
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .center ul li a {
-    text-decoration: none;
-    color: var(--background-color);
+    transition: all .2s ease-in-out;
 }
 
-li .drop {
+.center ul li a:hover {
+    font-size: large;
+    color: #000000;
+    background-color: aliceblue;
     padding: 10px 20px;
-    height: max-content;
-    width: calc(10vw + 100px);
-    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.center ul li .whatsaap:hover {
+    color: #25D366;
+}
+
+
+.right {
+    margin-left: auto;
+    margin-right: 1rem;
+    height: 100%;
+    width: 10%;
+    background-color: #090909;
     display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    left: 10px;
-    top: 50px;
 }
 
-li .drop>ul {
-    list-style: none;
+@media screen and (max-width: 760px) {
+    .right {
+        display: block;
+    }
+
+    .center {
+        display: none;
+    }
+}
+
+.hamburger {
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20p;
-}
-
-li .drop ul li {
-    height: 20px;
-    width: max-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-a {
+    gap: 5px;
     position: relative;
 }
 
-a::before {
-    content: '';
+.bar {
     height: 2px;
-    width: 0%;
-    background-color: var(--background-color);
+    width: 25px;
+    background-color: aliceblue;
+}
+
+.side-bar {
+    height: 80%;
+    width: 50%;
+    background-color: #c25c09;
+    display: none;
     position: absolute;
-    bottom: 0px;
-    left: 0px;
+    right: 0%;
+}
+
+.side-bar ul {
+    padding: 40px 20px;
+    height: 90%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-bar ul li a:hover {
     transition: all .2s ease-in;
 }
 
-a:hover::before {
-    width: 100%;
+.side-bar ul li a:hover {
+    font-size: large;
+    color: #000000;
+    background-color: aliceblue;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
-.right {
-    height: 100%;
-    width: 10%;
-    display: block;
+.side-bar ul li .whatsaap:hover {
+    color: #25D366;
 }
