@@ -1,15 +1,15 @@
 :root {
     --black: #000;
     --white: #fff;
+    --whatsApp-green-dark: #11813a;
     --whatsApp-green: #25D366;
     --dummy1: #000000d9;
     --dummy2: #000000a4;
     --dummy3: #0000006b;
     --dummy4: #00000036;
-    --temp1 : #2d2d2d;
+    --temp1: #2d2d2d;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
 * {
     padding: 0;
@@ -21,13 +21,15 @@ body {
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
-    font-family: "Orbitron", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
     scroll-margin-top: 5rem;
 }
-.invert{
+
+.invert {
     filter: invert(1);
 }
+
 .pg {
     height: 100%;
     width: 100%;
@@ -91,7 +93,7 @@ a {
 }
 
 .center ul li a:hover {
-    color: #000000;
+    color: var(--black);
     background-color: var(--white);
     padding: 10px 20px;
     border-radius: 10px;
@@ -298,43 +300,166 @@ img {
     }
 }
 
-.pg:nth-child(even){
+.pg:nth-child(even) {
     background-color: var(--dummy1);
 }
+
 /* home page completed  */
 #products section {
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: start;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
-#products section header{
+
+#products section header {
     height: 10%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#products section main{
-    height: 80%;
-    width: 100%;
-}
-#products section main .products-section{
-    height: 100%;
+
+#products section main {
+    height: 90%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 20px;
+    overflow: auto;
 }
-.products-section .card{
-    height: 40vh;
-    width: 15vw;
-    border-radius: 10px;
-    overflow: hidden;
+
+main .card {
+    padding: 20px 10px;
+    height: 60vh;
+    width: 20vw;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
-.products-section .card img{
+
+.card .card-img {
+    height: 40%;
+    width: 100%;
+}
+
+.card-img img {
     height: 100%;
     width: 100%;
+}
+
+.product-info {
+    padding-top: 10px;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.btns button{
+    height: 30px;
+    width: 100%;
+    background-color: var(--whatsApp-green);
+    transition: all .1s ease-in;
+    border-radius: 50px;
+}
+
+.btns button:hover{
+    font-size: 1rem;
+    background-color: var(--whatsApp-green-dark);
+}
+
+.light {
+    color: var(--dummy4);
+    font-size: 12px;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+
+
+@media screen and (max-width: 760px) {
+    main .card {
+        height: 60vh;
+        width: 30vw;
+        display: flex;
+        flex-shrink: 2;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card-img {
+        padding: 5px 0;
+        height: 100%;
+        width: 100%;
+    }
+
+}
+
+/* PRODUCTS PAGE COMPLETED */
+
+#address section{
+    height: 100%;
+    width: 100%;
+}
+#address section .adrees-info{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#address section .adrees-info aside{
+    height: 100%;
+    width: 40%;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 40px;
+}
+.adrees-info aside h1{
+    font-size: 30px;
+    padding: 40px 20px;
+}
+.adrees-info aside p{
+    font-size: 16px;
+    opacity: .8;
+    padding: 40px 20px;
+}
+/* address page completed */
+
+#location .location{
+    height: 100%;
+    width: 100%;
+    padding: 5rem 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#location .location iframe{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
 }
